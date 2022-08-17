@@ -5,7 +5,7 @@ function checkNum(n) {
   }
 
   for (var i = 2; i <= Math.sqrt(n); i++) {
-    if (n % i !== 0) {
+    if (n % i === 0) {
       return false
     }
   }
@@ -17,7 +17,7 @@ function displayNum() {
   var n = Number(document.querySelector('#inputNumN').value)
   var contents = ''
 
-  for (var i = 0; i < n; i++) {
+  for (var i = 0; i <= n; i++) {
     if (checkNum(i) === true) {
       contents += `
       ${i}, `
